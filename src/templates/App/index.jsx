@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-function Home() {
+export const Home = () => {
   return (
     <div className="Home">
       <Styled.Wrapper>
@@ -8,6 +8,4 @@ function Home() {
       </Styled.Wrapper>
     </div>
   );
-}
-
-export default Home;
+};
