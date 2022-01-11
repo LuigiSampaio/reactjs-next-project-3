@@ -16,4 +16,13 @@ describe('<MenuLink />', () => {
     );
     expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute('target', '_blank');
   });
+
+  it('should match snapshot', () => {
+    const { container } = renderTheme(
+      <MenuLink link={'http://localhost'} newTab={true}>
+        Children
+      </MenuLink>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
