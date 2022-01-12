@@ -1,20 +1,25 @@
+import { screen } from '@testing-library/react';
+import { renderTheme } from '../../styles/render-theme';
 import { SectionBackground } from '.';
 
-export default {
-  title: 'SectionBackground',
-  component: SectionBackground,
-  args: {
-    children: 'SectionBackground',
-  },
-  argTypes: {
-    children: { type: 'string' },
-  },
-};
+describe('<SectionBackground />', () => {
+  it('should render with background dark', () => {
+    const { container } = renderTheme(
+      <SectionBackground background={true}>
+        <h1>Children</h1>
+      </SectionBackground>,
+    );
+    expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
 
-export const Template = (args) => {
-  return (
-    <div>
-      <SectionBackground {...args} />
-    </div>
-  );
-};
+  it('should render with background light', () => {
+    const { container } = renderTheme(
+      <SectionBackground>
+        <h1>Children</h1>
+      </SectionBackground>,
+    );
+    expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+});

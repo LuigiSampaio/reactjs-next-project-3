@@ -4,10 +4,19 @@ export default {
   title: 'SectionBackground',
   component: SectionBackground,
   args: {
-    children: 'SectionBackground',
+    children: (
+      <div>
+        <h1>SectionBackground</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, excepturi? Deserunt labore quisquam error
+          atque eius, sit odit ut officiis quo corrupti modi obcaecati! Officiis quibusdam illo minima nesciunt
+          recusandae.
+        </p>
+      </div>
+    ),
   },
   argTypes: {
-    children: { type: 'string' },
+    children: { type: '' },
   },
 };
 
