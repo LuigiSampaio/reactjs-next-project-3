@@ -50,6 +50,7 @@ exports[`<NavLinks /> should match snapchot 1`] = `
 }
 
 <nav
+  aria-label="Main menu"
   class="c0"
 >
   <a
