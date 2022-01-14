@@ -14,7 +14,7 @@ describe('<Menu />', () => {
     const { container } = renderTheme(<Menu links={linksMock} logoData={logoData} />);
     expect(screen.getByRole('heading', { name: 'Logo' })).toBeInTheDocument();
     expect(screen.getByRole('navigation', { name: 'Main menu' })).toBeInTheDocument();
-    // expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('should render Menu Mobile and Button for Open and Close the Menu', () => {
