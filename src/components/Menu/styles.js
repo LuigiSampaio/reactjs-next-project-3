@@ -12,10 +12,8 @@ export const Container = styled.div`
     position: fixed;
     z-index: 5;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
-    height: 100%;
+    right: 0;
     width: 100%;
     border-bottom: ${theme.colors.mediumGray};
     background: ${theme.colors.white};
@@ -35,7 +33,8 @@ export const Container = styled.div`
       height: 100vh;
       visibility: hidden;
       opacity: 0;
-      ${visible && menuVisible(theme)};
+
+      ${visible && menuVisible(theme)}
 
       > ${SectionContainer} {
         display: grid;
@@ -81,8 +80,7 @@ export const Button = styled.button`
     color: ${theme.colors.white};
     border: none;
     display: none;
-    pointer-events: ${visible};
-
+    pointer-events: ${visible ? 'none' : 'all'};
     @media ${theme.media.lteMedium} {
       display: flex;
       align-items: center;

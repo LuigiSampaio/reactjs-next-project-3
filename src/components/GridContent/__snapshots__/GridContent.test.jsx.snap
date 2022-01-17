@@ -68,7 +68,6 @@ exports[`<GridContent /> should render a Grid Content 1`] = `
           <div
             class="c5"
           >
-             ,
             <p>
               <strong>
                 Pellentesque habitant morbi tristique

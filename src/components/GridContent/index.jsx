@@ -12,7 +12,7 @@ export const GridContent = ({ title, html, background = false }) => {
           {title}
         </Heading>
         <Styled.Html>
-          <TextComponent> {html}</TextComponent>
+          <TextComponent>{html}</TextComponent>
         </Styled.Html>
       </Styled.Container>
     </SectionBackground>
