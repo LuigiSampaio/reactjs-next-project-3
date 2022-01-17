@@ -9,9 +9,4 @@ describe('<GridContent />', () => {
     const { container } = renderTheme(<GridContent {...mock} />);
     expect(container).toMatchSnapshot();
   });
-
-  it('should render a Grid Content', () => {
-    const { container } = renderTheme(<GridContent {...mock} background={undefined} />);
-    expect(container).toMatchSnapshot();
-  });
 });
